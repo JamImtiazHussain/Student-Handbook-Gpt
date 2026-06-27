@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Custom GPT Chatbot</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="chat-body">
+
+  <!-- Background Glows -->
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+
+  <div class="chat-shell">
+
+    <!-- Top Bar -->
+    <header class="top-bar">
+      <div class="top-bar-left">
+        <div class="app-logo">
+          <span class="logo-mark">AI</span>
+          <span class="logo-text">STUDENT HANDBOOK</span>
+        </div>
+        <span class="top-bar-subtitle d-none d-md-inline">
+          Professional AI assistant • Built by HASSAN ALI & JAM IMTIAZ</span>
+       
+      </div>
+
+     <div class="top-bar-right">
+  <div class="pill-badge">
+    <span class="pill-label">Environment</span>
+    <span class="pill-value">Development</span>
+  </div>
+
+  <div class="pill-badge ms-2 d-none d-sm-inline-flex">
+    <span class="pill-label">Model</span>
+    <span class="pill-value">Custom GPT</span>
+  </div>
+
+  <!-- 🔁 Reset Chat Button -->
+  <button type="button" id="reset-chat-btn" class="pill-badge pill-reset-btn ms-2">
+    <span class="pill-label">Chat</span>
+    <span class="pill-value">Reset 🗑️</span>
+  </button>
+</div>
+
+    </header>
+
+    <!-- Main Chat -->
+    <main class="chat-main container-fluid px-2 px-md-4">
+      <div class="row h-100">
+        <div class="col-12">
+
+          <div class="chat-card shadow-lg border-0 rounded-4">
+
+            <!-- Header Row -->
+            <div class="chat-header border-bottom px-3 px-md-4 py-3">
+              <div class="d-flex align-items-center justify-content-between gap-3">
+                
+                <div class="d-flex align-items-center gap-3">
+                  <div class="chat-avatar"><span>AI</span></div>
+
+                  <div>
+                    <h2 class="chat-title mb-0">Chat with your AI assistant</h2>
+                    <div class="d-flex align-items-center gap-2">
+                      <span class="status-dot"></span>
+                      <small class="text-muted">Online • Ready to help</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="session-indicator d-none d-md-flex">
+                  <span class="dot-live"></span>
+                  <span class="session-text">Session active</span>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Chat Area -->
+            <div class="chat-content d-flex flex-column">
+
+              <!-- Output -->
+              <div id="chat-output" class="chat-output">
+                <div class="chat-placeholder text-muted text-center">
+                  <p class="mb-1">Welcome to your custom GPT workspace ✨</p>
+                  <small>Ask anything to begin.</small>
+                </div>
+              </div>
+
+              <!-- Input -->
+              <div class="chat-footer border-top px-2 px-md-4 py-3">
+                <form id="chat-form" class="chat-form">
+
+                  <div class="input-group chat-input-group">
+                    <span class="input-group-text chat-input-icon">💬</span>
+
+                    <input 
+                      type="text" 
+                      id="chat-input" 
+                      class="form-control chat-input"
+                      placeholder="Message your AI assistant..."
+                      autocomplete="off"
+                      required />
+
+                    <button type="submit" class="btn btn-primary chat-send-btn">
+                      <span class="send-label d-none d-sm-inline">Send</span>
+                      <span class="send-icon">➤</span>
+                    </button>
+
+                  </div>
+
+                  <div class="chat-hint mt-2 d-flex justify-content-between flex-wrap">
+                    <small class="text-muted">
+                      Tip: Ask for ideas, explanations or code help.
+                    </small>
+                  </div>
+
+                </form>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="text-center mt-3 text-muted small">
+            © <span id="year-span"></span> • Custom GPT Interface
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+  </div>
+
+  <script>
+    document.getElementById("year-span").textContent = new Date().getFullYear();
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
